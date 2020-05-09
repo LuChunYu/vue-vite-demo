@@ -3,13 +3,23 @@
   <p>Edit ./App.vue to test hot module replacement (HMR).</p>
   <p>
     <span>Count is: {{ count }}</span>
-    <button @click="count++">increment</button>
+    <button @click="add">increment</button>
   </p>
+  <Button></Button>
 </template>
 
 <script>
+import Button from './Button.vue'
 export default {
-  data: () => ({ count: 0 })
+  data: () => ({ count: 0 }),
+  components: {
+    Button
+  },
+  methods: {
+    add() {
+      this.count += 1
+    }
+  },
 }
 </script>
 
