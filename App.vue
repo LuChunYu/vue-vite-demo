@@ -6,14 +6,17 @@
     <button @click="add">increment</button>
   </p>
   <Button></Button>
+  <List />
 </template>
 
 <script>
 import Button from './Button.vue'
+import List from './List.vue'
 export default {
   data: () => ({ count: 0 }),
   components: {
-    Button
+    Button,
+    List
   },
   methods: {
     add() {
